@@ -59,6 +59,7 @@ Below are some of the key SQL operations performed during the project:
 # Removing Duplicates
 
 DELETE FROM world_layoffs.layoffs_staging2
+
 WHERE row_num >= 2;
 
 # Updating Null Industries
