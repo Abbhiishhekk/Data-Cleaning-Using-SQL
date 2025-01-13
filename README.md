@@ -128,5 +128,5 @@ Perform exploratory data analysis to identify trends in layoffs.
 
  # License
 
-This project is provided for educational purposes and follows the Kaggle dataset license.
+ follows the Kaggle dataset license.
 
