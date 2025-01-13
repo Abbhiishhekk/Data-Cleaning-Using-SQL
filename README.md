@@ -78,20 +78,26 @@ AND t2.industry IS NOT NULL;
  # Standardizing Industry Names
 
 UPDATE layoffs_staging2
+
 SET industry = 'Crypto'
+
 WHERE industry IN ('Crypto Currency', 'CryptoCurrency');
 
 # Cleaning Country Names
 
 UPDATE layoffs_staging2
+
 SET country = TRIM(TRAILING '.' FROM country);
 
 # Converting Date Format
 
 UPDATE layoffs_staging2
+
 SET `date` = STR_TO_DATE(`date`, '%m/%d/%Y');
 
+
 ALTER TABLE layoffs_staging2
+
 MODIFY COLUMN `date` DATE;
 
 # Final Dataset
@@ -118,7 +124,6 @@ Use the cleaned dataset for further analysis and visualization.
 
 Perform exploratory data analysis to identify trends in layoffs.
 
-Develop interactive dashboards using tools like Power BI or Tableau.
 
  # License
 
